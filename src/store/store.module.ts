@@ -3,6 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { ModelModule } from "src/model/model.module";
 import { StoreComponent } from "./store.component";
+import { CounterDirective } from "./counter.directive";
 
 @NgModule({
     imports: [
@@ -12,6 +13,7 @@ import { StoreComponent } from "./store.component";
     ],
     declarations: [
         StoreComponent,
+        CounterDirective,
     ],
     exports: [
         StoreComponent,
