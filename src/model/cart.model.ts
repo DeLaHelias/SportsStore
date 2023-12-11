@@ -53,6 +53,8 @@ export class Cart {
     }
 }
 
+// Array of individual product selections
+
 export class CartLine {
 
     constructor(

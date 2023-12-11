@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { ModelModule } from "src/model/model.module";
 import { StoreComponent } from "./store.component";
 import { CounterDirective } from "./counter.directive";
+import { CartSummaryComponent } from "./cartSummary.compnent";
 
 @NgModule({
     imports: [
@@ -14,6 +15,7 @@ import { CounterDirective } from "./counter.directive";
     declarations: [
         StoreComponent,
         CounterDirective,
+        CartSummaryComponent,
     ],
     exports: [
         StoreComponent,
