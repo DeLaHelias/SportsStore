@@ -3,6 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { StoreModule } from 'src/app/store/store.module';
+import { StoreComponent } from './store/store.component';
+import { CheckoutComponent } from './store/checkout.component';
+import { CartDetailComponent } from './store/cartDetail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -11,6 +15,12 @@ import { StoreModule } from 'src/app/store/store.module';
   imports: [
     BrowserModule,
     StoreModule,
+    RouterModule.forRoot([
+      { path: "store", component: StoreComponent, },
+      { path: "cart", component: CartDetailComponent, },
+      { path: "checkout", component: CheckoutComponent, },
+      { path: "**", redirectTo: "/store", },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
