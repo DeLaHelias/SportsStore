@@ -1,7 +1,7 @@
 import { Component } from "@angular/core";
-import { Product } from "src/app/model/product.model";
-import { ProductRepository } from "src/app/model/product.repository";
-import { Cart } from "src/app/model/cart.model";
+import { Product } from "../model/product.model";
+import { ProductRepository } from "../model/product.repository";
+import { Cart } from "../model/cart.model";
 
 @Component({
     selector: "store",
