@@ -4,6 +4,7 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule } from "@angular/router";
 import { AuthComponent } from "./auth.component";
 import { AdminComponent } from "./admin.component";
+import { AuthGuard } from "./auth.guard";
 
 let routing = RouterModule.forChild([
     {
@@ -13,6 +14,11 @@ let routing = RouterModule.forChild([
     {
         path: "main",
         component: AdminComponent,
+    },
+    {
+        path: "main",
+        component: AdminComponent,
+        canActivate: [AuthGuard],
     },
     {
         path: "**", 
@@ -30,5 +36,6 @@ let routing = RouterModule.forChild([
         AuthComponent,
         AdminComponent,
     ],
+    providers: [ AuthGuard, ]
 })
 export class AdminModule { }

@@ -11,7 +11,7 @@ import { StoreFirstGuard } from './store/storeFirst.guard';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,7 +38,10 @@ import { StoreFirstGuard } from './store/storeFirst.guard';
           .then(m => m.AdminModule),
         canActivate: [StoreFirstGuard],
       },
-      { path: "**", redirectTo: "/store", },
+      { 
+        path: "**",
+        redirectTo: "/store",
+      },
     ])
   ],
   providers: [StoreFirstGuard],
