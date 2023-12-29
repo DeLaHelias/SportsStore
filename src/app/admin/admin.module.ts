@@ -5,6 +5,7 @@ import { RouterModule } from "@angular/router";
 import { AuthComponent } from "./auth.component";
 import { AdminComponent } from "./admin.component";
 import { AuthGuard } from "./auth.guard";
+import { MaterialFeatures } from "./material.module";
 
 let routing = RouterModule.forChild([
     {
@@ -31,6 +32,7 @@ let routing = RouterModule.forChild([
         CommonModule,
         FormsModule,
         routing,
+        MaterialFeatures,
     ],
     declarations: [
         AuthComponent,
