@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RouterModule } from '@angular/router';
+import { StoreModule } from 'src/app/store/store.module';
 
 import { AppComponent } from './app.component';
-import { StoreModule } from 'src/app/store/store.module';
-import { StoreComponent } from './store/store.component';
-import { CheckoutComponent } from './store/checkout.component';
 import { CartDetailComponent } from './store/cartDetail.component';
-import { RouterModule } from '@angular/router';
+import { CheckoutComponent } from './store/checkout.component';
+import { StoreComponent } from './store/store.component';
 import { StoreFirstGuard } from './store/storeFirst.guard';
 
 @NgModule({
@@ -42,7 +43,8 @@ import { StoreFirstGuard } from './store/storeFirst.guard';
         path: "**",
         redirectTo: "/store",
       },
-    ])
+    ]),
+    BrowserAnimationsModule,
   ],
   providers: [StoreFirstGuard],
   bootstrap: [AppComponent]
