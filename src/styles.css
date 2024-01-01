@@ -36,3 +36,5 @@ mat-sidenav .mat-button-wrapper {
 
 mat-sidenav .mat-button-wrapper mat-icon { margin-top: 5px; }
 mat-sidenav .mat-button-wrapper span { text-align: start; }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
