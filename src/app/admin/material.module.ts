@@ -3,6 +3,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatTableModule } from '@angular/material/table';
 import { MatToolbarModule } from '@angular/material/toolbar';
 
 const features: any[] = [
@@ -11,6 +12,7 @@ const features: any[] = [
     MatIconModule,
     MatSidenavModule,
     MatToolbarModule,
+    MatTableModule,
 ];
 
 @NgModule({
