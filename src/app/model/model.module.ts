@@ -1,11 +1,13 @@
-import { NgModule } from "@angular/core";
-import { ProductRepository } from "./product.repository";
-import { StaticDataSource } from "./static.datasource";
-import { Cart } from "./cart.model";
-import { Order } from "./order.model";
-import { OrderRepository } from "./order.repository";
-import { RestDataSource } from "./rest.datasource";
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
+import { NgModule } from '@angular/core';
+
+import { AuthService } from './auth.service';
+import { Cart } from './cart.model';
+import { Order } from './order.model';
+import { OrderRepository } from './order.repository';
+import { ProductRepository } from './product.repository';
+import { RestDataSource } from './rest.datasource';
+import { StaticDataSource } from './static.datasource';
 
 @NgModule({
     imports: [
@@ -13,7 +15,6 @@ import { HttpClientModule } from "@angular/common/http";
     ],
     providers: [
         ProductRepository,
-        StaticDataSource,
         Cart,
         Order,
         OrderRepository,
@@ -21,6 +22,8 @@ import { HttpClientModule } from "@angular/common/http";
             provide: StaticDataSource,
             useClass: RestDataSource,
         },
+        RestDataSource,
+        AuthService,
     ]
 })
 export class ModelModule { }
