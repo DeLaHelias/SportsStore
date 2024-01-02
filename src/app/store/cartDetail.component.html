@@ -65,11 +65,11 @@
     <div class="row">
         <div class="col">
             <div class="text-center">
-                <button class="btn btn-primary m-1" routerLink="/store">
+                <button class="btn btn-primary m-1" type="button" routerLink="/store">
                     Continue Shopping
                 </button>
-                <button class="btn btn-secondary m-1" routerLink="/checkout" [disabled]="cart.lines.length == 0">
-                    Checkout
+                <button class="btn btn-secondary m-1" type="button" routerLink="/checkout" [disabled]="cart.lines.length == 0 || !connected">
+                    {{ connected ? 'Checkout' : 'Offline' }}
                 </button>
             </div>
         </div>
